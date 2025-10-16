@@ -15,7 +15,9 @@ public class Produkts {
         System.out.println("Cena:" + produktacena);
         System.out.println("Daudzums" + produktuskaits);
         System.out.println("Kopējā cena:" + produktuskaits * produktacena);
-
+        
+            
+    
 
         reader.close();
     }
