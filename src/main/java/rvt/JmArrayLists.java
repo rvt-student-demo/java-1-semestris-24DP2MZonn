@@ -2,7 +2,7 @@ package rvt;
     import java.util.*;
 public class JmArrayLists {
     public static void main(String[] args) {
-        onlyTheseNumbers();
+        Listsize();
     }
     public static void onlyTheseNumbers() {
         Scanner reader = new Scanner(System.in);
@@ -31,6 +31,25 @@ public class JmArrayLists {
         }
 
         reader.close();
+    }
+    public static void Listsize() {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<String> wordStrings = new ArrayList<>();
+        
+
+        while(true){
+            System.out.print("Put your name (To exit enter 'Exit'): ");
+            wordStrings.add(reader.nextLine());
+            if(wordStrings.equals("Exit")){
+                break;
+            }
+            else{
+                System.out.println("Size: " + wordStrings.size());
+            
+
+            }
+        }
+        
     }
 }
         
