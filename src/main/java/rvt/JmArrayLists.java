@@ -2,7 +2,7 @@ package rvt;
     import java.util.*;
 public class JmArrayLists {
     public static void main(String[] args) {
-        Listsize();
+        removeLast();
     }
     public static void onlyTheseNumbers() {
         Scanner reader = new Scanner(System.in);
@@ -38,17 +38,63 @@ public class JmArrayLists {
         
 
         while(true){
-            System.out.print("Put your name (To exit enter 'Exit'): ");
-            wordStrings.add(reader.nextLine());
-            if(wordStrings.equals("Exit")){
-                break;
-            }
-            else{
-                System.out.println("Size: " + wordStrings.size());
+            System.out.print("Put your name (To exit enter ''): ");
+            String name = reader.nextLine();
+                if(name.equals("")){
+                    break;
+                }
+                wordStrings.add(new String(name));
             
-
-            }
         }
+        System.out.println("Size: " + wordStrings.size());
+        
+    }
+    public static void onTheList(){
+        Scanner reader = new Scanner(System.in);
+        ArrayList<String> strings = new ArrayList<>();
+
+        while(true){
+            System.out.print("Put your name (To exit enter ''): ");
+            String name = reader.nextLine();
+                if(name.equals("")){
+                    break;
+                }
+                strings.add(new String(name));
+            
+        }
+        System.out.println("Search for? ");
+        String name = reader.nextLine();
+        if(strings.contains(reader.nextLine())){
+            System.out.println(name + " was found!");
+        }
+        else{
+            System.out.println(name + " was not found!");
+        }
+        
+
+    }
+    public static void removeLast() {
+        Scanner reader = new Scanner(System.in);
+        ArrayList<String> wordStrings = new ArrayList<>();
+        
+
+        while(true){
+            System.out.print("Put your name (To exit enter ''): ");
+            String name = reader.nextLine();
+                if(name.equals("")){
+                    break;
+                }
+                wordStrings.add(new String(name));
+            
+        }
+        if(wordStrings.size() == 0){
+            System.out.println(wordStrings);
+        }  
+        else{
+            wordStrings.remove(wordStrings.size()- 1);
+            System.out.println(wordStrings);
+        }
+        
         
     }
 }
